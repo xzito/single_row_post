@@ -4,8 +4,10 @@ use Mole\SRP\Helpers;
 ?>
 <div class="row">
 
-    <div class="col-md-6 singlerowpost-background-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>) !important;">
+    <div class="col-md-6 singlerowpost-left-col">
+        <div class="singlerowpost-background-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>) !important;">
 
+        </div>
     </div>
 
     <div class="col-md-6">

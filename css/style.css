@@ -4,9 +4,14 @@
 
 .singlerowpost-background-image {
     background-size: cover !important;
-    padding-left: 15px;
-    padding-right: 15px;
     height: 410px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.singlerowpost-left-col {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .contain-singlerowpost-content {
@@ -29,10 +34,4 @@
 .singlerowpost-link a {
     font-size: 16px;
     text-transform: uppercase;
-}
-
-@media (min-height:991px) {
-    .singlerowpost-background-image {
-        height: 300px;
-    }
 }
