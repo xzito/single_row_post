@@ -1,0 +1,10 @@
+{
+    "name": "xzito/single_row_post",
+    "version": "0.1.0",
+    "description": "Get the latest post on a page. Using a shortcode.",
+    "type": "wordpress-plugin",
+    "authors": [{
+        "name": "Nicholas Mole",
+        "email": "nmole065@g.rwu.edu"
+    }]
+}
