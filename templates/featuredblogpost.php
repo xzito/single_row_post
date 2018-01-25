@@ -31,7 +31,7 @@ use Mole\SRP\Helpers;
 
             <div class="singlerowpost-title singlerowpost-link">
 
-                <a href="<?php echo esc_url( get_permalink( get_the_ID() ) ) ?>">
+                <a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
                     Read Full Story
                 </a>
 
