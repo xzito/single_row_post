@@ -15,7 +15,7 @@ use Mole\SRP\Helpers;
         <div class="contain-singlerowpost-content">
 
             <h4 class="singlerowpost-latest-news">
-              Latest News
+                 News
             </h4>
 
             <h4 class="archive-title singlerowpost-title">
@@ -27,7 +27,14 @@ use Mole\SRP\Helpers;
             </div>
 
             <p>
-              <?php Helpers::content_filter_vs_shortcodes(get_the_content()); ?>
+              <?php 
+                
+                if ( has_excerpt($post->ID) ) {
+                    echo get_the_excerpt($post->ID);
+                } else {
+                    Helpers::content_filter_vs_shortcodes(get_the_content()); 
+                }
+                ?>
             </p>
             <!-- .entry-content -->
 
