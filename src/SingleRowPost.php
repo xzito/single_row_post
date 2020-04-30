@@ -6,35 +6,18 @@ use Mole\SRP\Helpers;
 
 class SingleRowPost {
 
-  //Contructor
-  public function __construct()
-  { 
-
-    //Function of class : call short code render
-    add_shortcode( 'singlerowpost', array($this, 'render_first_blog_post' ));
-
+  public function __construct() {
+    add_shortcode('singlerowpost', [$this, 'render_first_blog_post']);
   }
 
-  public function render_first_blog_post(){
+  public function render_first_blog_post() {
+    $posts = get_posts(['numberposts' => 1, 'post_type' => 'post']);
 
-      $args = array( 'posts_per_page' => 1); 
+    foreach ($posts as $post) {
+      setup_postdata($post);
+      include Helpers::get_template_path('featured_blog_post.php');
+    }
 
-      $loop = get_posts($args); 
-      foreach ( $loop as $post ) :
-
-        setup_postdata($post);
-
-        //Get confirm - template
-        $template = Helpers::get_template_path('featuredblogpost.php');
-
-        //Print template for page : confirming new user s confirmed
-        include $template;
-          
-      endforeach; 
-
-      wp_reset_postdata();// end of the loop. 
-       
+    wp_reset_postdata();
   }
-
-
 }
