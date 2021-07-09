@@ -9,7 +9,7 @@ release_branch="master"
 root="$(git rev-parse --show-toplevel)"
 
 tag() {
-  jq -r ".version" "$(root)/composer.json"
+  jq -r ".version" "$root/composer.json"
 }
 
 current_branch() {
