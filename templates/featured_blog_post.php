@@ -15,12 +15,12 @@ $title        = get_the_title($post->ID);
   </div>
   <div class="col-md-6">
     <div class="contain-singlerowpost-content">
-      <h4 class="singlerowpost-latest-news">News</h4>
+      <h4 class="singlerowpost-heading"><?= $heading ?></h4>
       <h4 class="archive-title singlerowpost-title"><?= $title ?></h4>
       <div class="archive-time-line singlerowpost-time"><?= $published_at ?></div>
       <p><?= $excerpt ?></p>
       <div class="singlerowpost-title singlerowpost-link">
-        <a href="<?= $link ?>">Read Full Story</a>
+        <a href="<?= $link ?>"><?= $link_text ?></a>
       </div>
     </div>
   </div>

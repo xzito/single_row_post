@@ -1,10 +1,13 @@
-# single row post
+# Single Row Post
 
-Get the latest post on a page. Using a shortcode.
+Get the latest post on a page using a shortcode.
 
-simple add the shortcode [singlerowpost] and get the first blog post
+## Usage
 
+Add the shortcode in the content editor.
 
-The first Half of the row is the the featured image
+```php
+[single_row_post heading="Latest Blog Post" link_text="Read More"]
+```
 
-The other side is the word LATEST NEWS, title, dates, an except of the content (either at 50 words or specified amount), and a link to the actual blog post(the link doesnt work yet)
+The image displayed to the left of the excerpt is the post's featured image.
